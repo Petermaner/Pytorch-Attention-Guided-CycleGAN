@@ -11,7 +11,7 @@ class ResBlock(nn.Module):
         block = [  nn.ReflectionPad2d(1),
                 nn.Conv2d(in_features, in_features, 3),
                 # nn.InstanceNorm2d(in_features),
-                nn.ReLU(inplace=True),
+                nn.ReLU(inplace=False),
                 nn.ReflectionPad2d(1),
                 nn.Conv2d(in_features, in_features, 3),
                 # nn.InstanceNorm2d(in_features)
